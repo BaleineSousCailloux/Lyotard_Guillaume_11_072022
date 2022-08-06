@@ -8,7 +8,7 @@ function Locations() {
 
   async function fetchLocations() {
     try {
-      const response = fetch(logements)
+      const response = await fetch(logements)
       const locationsList = await response.json()
       setLocationsList(locationsList)
     } catch (err) {
