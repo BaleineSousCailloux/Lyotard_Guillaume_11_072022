@@ -1,5 +1,7 @@
+import Locations from '../components/Locations'
+
 function Home() {
-  return <h1>Hello World !</h1>
+  return <Locations />
 }
 
 export default Home
