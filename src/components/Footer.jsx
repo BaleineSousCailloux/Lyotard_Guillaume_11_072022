@@ -1,7 +1,5 @@
 import logo from '../assets/logo-white.svg'
 import styled from 'styled-components'
-// import { StyledLink } from '../../utils/style/links'
-// import DarkLogo from '../../assets/dark-logo.png'
 
 const FooterLogo = styled.img`
   height: 39.44px;

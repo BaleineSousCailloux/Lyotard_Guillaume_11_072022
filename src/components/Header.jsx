@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo-red.svg'
 import styled from 'styled-components'
-// import { StyledLink } from '../../utils/style/links'
-// import DarkLogo from '../../assets/dark-logo.png'
 
 const HeaderLogo = styled.img`
   height: 68px;
