@@ -7,20 +7,37 @@ const HeaderLogo = styled.img`
   width: 210.32px;
 `
 
-// const NavContainer = styled.nav`
-//   padding: 30px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// `
+const Container = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 100px 0 100px;
+`
+
+const NavContainer = styled.nav`
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  color: #ff6060;
+  padding-left: 57px;
+  font-size: 24px;
+  font-weight: 500;
+`
 
 function Header() {
   return (
-    <div>
+    <Container>
       <HeaderLogo src={logo} alt="logo kaza" />
-      <Link to="/">Accueil</Link>
-      <Link to="/about">A propos</Link>
-    </div>
+      <NavContainer>
+        <NavLink to="/">Accueil</NavLink>
+        <NavLink to="/about">A propos</NavLink>
+      </NavContainer>
+    </Container>
   )
 }
 
