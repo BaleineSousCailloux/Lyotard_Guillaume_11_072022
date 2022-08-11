@@ -45,7 +45,7 @@ const DropdownText = styled.div`
   color: #ff6060;
 `
 
-function Dropdown({ title, description, tags }) {
+function Dropdown({ title, description, items }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return !isOpen ? (
@@ -68,12 +68,12 @@ function Dropdown({ title, description, tags }) {
               <p>{description}</p>
             </DropdownText>
           )
-        } else if (tags) {
+        } else if (items) {
           return (
             <DropdownItems>
               <ul>
-                {tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
+                {items.map((item) => (
+                  <li key={item}>{item}</li>
                 ))}
               </ul>
             </DropdownItems>

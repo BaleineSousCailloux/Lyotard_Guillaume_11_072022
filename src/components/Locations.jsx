@@ -25,13 +25,13 @@ const PageTitle = styled.h1`
 
 function Locations() {
   const allLocations = FetchDatas()
-  // console.log(allLocations[0])
+  console.log(allLocations)
   return (
     <div>
       <PageTitle>Chez vous, partout et ailleurs</PageTitle>
       <CardsContainer>
         {allLocations.map((oneLocation) => (
-          <Link to={oneLocation.id}>
+          <Link to={oneLocation.id} key={oneLocation.id}>
             <Card
               key={oneLocation.id}
               title={oneLocation.title}
