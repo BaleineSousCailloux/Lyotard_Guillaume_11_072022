@@ -1,13 +1,17 @@
 import styled from 'styled-components'
+import EmptyStar from '../assets/StarEmpty.svg'
+import FullStar from '../assets/StarFull.svg'
 
-const Empty = styled.span`
-  font-size: 30px;
-  color: #e3e3e3;
+const Empty = styled.img`
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 10px 10px;
 `
 
-const Full = styled.span`
-  font-size: 30px;
-  color: #ff6060;
+const Full = styled.img`
+  width: 30px;
+  height: 30px;
+  margin: 10px 0 10px 10px;
 `
 
 function Stars({ rating }) {
@@ -17,9 +21,9 @@ function Stars({ rating }) {
     <div>
       {ratingRange.map((unit) =>
         rating >= unit ? (
-          <Full key={unit.toString()}>*</Full>
+          <Full src={FullStar} alt="Etoile remplie" key={unit.toString()} />
         ) : (
-          <Empty key={unit.toString()}>*</Empty>
+          <Empty src={EmptyStar} alt="Etoile vide" key={unit.toString()} />
         )
       )}
     </div>

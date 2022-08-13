@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import styled from 'styled-components'
+import ArrowUp from '../assets/VectorUp.svg'
+import ArrowDown from '../assets/VectorDown.svg'
 
 const DropdownContainer = styled.div`
-  margin-top: 20px;
+  margin-top: 31px;
   width: 100%;
-  font-size: 18px;
+  font-size: 24px;
+  font-weight: 400;
 `
 
 const DropdownCase = styled.div`
@@ -21,6 +24,8 @@ const DropdownCase = styled.div`
 
 const DropdownTitle = styled.h4`
   text-align: left;
+  font-size: 24px;
+  font-weight: 500;
 `
 
 const DropdownItems = styled.div`
@@ -52,14 +57,14 @@ function Dropdown({ title, description, items }) {
     <DropdownContainer>
       <DropdownCase>
         <DropdownTitle>{title}</DropdownTitle>
-        <span onClick={() => setIsOpen(true)}>arrow</span>
+        <img src={ArrowDown} alt="flèche" onClick={() => setIsOpen(true)} />
       </DropdownCase>
     </DropdownContainer>
   ) : (
     <DropdownContainer>
       <DropdownCase>
         <DropdownTitle>{title}</DropdownTitle>
-        <span onClick={() => setIsOpen(false)}>arrow</span>
+        <img src={ArrowUp} alt="flèche" onClick={() => setIsOpen(false)} />
       </DropdownCase>
       {(() => {
         if (description) {

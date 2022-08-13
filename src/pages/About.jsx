@@ -2,26 +2,53 @@ import Dropdown from '../components/Dropdown'
 import styled from 'styled-components'
 import couverture from '../assets/about-couverture-desktop.jpg'
 
-const PageTitle = styled.h1`
-  width: 90%;
+const Container = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 100px 0 100px;
+`
+
+const PageTitle = styled.div`
+  width: 100%;
   height: 223px;
-  background-image: url(${couverture});
-  font-size: 48px;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  padding: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 25px;
+  overflow: hidden;
+`
+
+const BlackFilter = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background: #00000050;
+  position: absolute;
+`
+
+const Couverture = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `
 
 const ContainerDrops = styled.div`
-  width: 1023px;
+  width: 85%;
+  margin-bottom: 100px;
 `
 
 function About() {
   return (
-    <div>
-      <PageTitle />
+    <Container>
+      <PageTitle>
+        <BlackFilter />
+        <Couverture src={couverture} alt="image de couverture" />
+      </PageTitle>
       <ContainerDrops>
         <Dropdown
           title="Fiabilité"
@@ -40,7 +67,7 @@ function About() {
           description="La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l'hôte qu'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
         />
       </ContainerDrops>
-    </div>
+    </Container>
   )
 }
 

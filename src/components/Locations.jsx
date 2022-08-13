@@ -1,4 +1,4 @@
-import FetchDatas from '../Datas/FetchDatas'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Card from './Card'
 import styled from 'styled-components'
@@ -60,8 +60,27 @@ const Couverture = styled.img`
 `
 
 function Locations() {
-  const allLocations = FetchDatas()
-  console.log(allLocations)
+  const [error, setError] = useState(false)
+  const [locationsList, setLocationsList] = useState([])
+
+  useEffect(() => {
+    async function fetchLocations() {
+      try {
+        const response = await fetch('./datas/logements.json')
+        const locationsList = await response.json()
+        setLocationsList(locationsList)
+      } catch (err) {
+        console.log('===== error =====', err)
+        setError(true)
+      }
+    }
+    fetchLocations()
+  }, [])
+
+  if (error) {
+    return <span>Oups il y a eu un problème</span>
+  }
+
   return (
     <Container>
       <PageTitle>
@@ -70,7 +89,7 @@ function Locations() {
         <Title>Chez vous, partout et ailleurs</Title>
       </PageTitle>
       <CardsContainer>
-        {allLocations.map((oneLocation) => (
+        {locationsList.map((oneLocation) => (
           <Link to={oneLocation.id} key={oneLocation.id}>
             <Card
               key={oneLocation.id}
