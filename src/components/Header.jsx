@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo-red.svg'
 import styled from 'styled-components'
 
@@ -19,23 +20,41 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-`
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  color: #ff6060;
-  padding-left: 57px;
   font-size: 24px;
   font-weight: 500;
 `
+
+// const NavigationLink = styled(NavLink)`
+//   text-decoration: none;
+//   color: #ff6060;
+//   padding-left: 57px;
+// `
 
 function Header() {
   return (
     <Container>
       <HeaderLogo src={logo} alt="logo kaza" />
       <NavContainer>
-        <NavLink to="/">Accueil</NavLink>
-        <NavLink to="/about">A propos</NavLink>
+        <NavLink
+          to="/"
+          style={({ isActive }) => ({
+            color: '#ff6060',
+            paddingLeft: '57px',
+            textDecoration: isActive ? 'underline' : 'none',
+          })}
+        >
+          Accueil
+        </NavLink>
+        <NavLink
+          to="/about"
+          style={({ isActive }) => ({
+            color: '#ff6060',
+            paddingLeft: '57px',
+            textDecoration: isActive ? 'underline' : 'none',
+          })}
+        >
+          A Propos
+        </NavLink>
       </NavContainer>
     </Container>
   )

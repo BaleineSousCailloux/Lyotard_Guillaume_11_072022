@@ -15,11 +15,11 @@ const Container = styled.article`
 `
 
 const BlocInfos = styled.div`
-  width: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 30px;
 `
 
 const BlocTitre = styled.div`
@@ -28,14 +28,29 @@ const BlocTitre = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  font-weight: 500;
+`
+
+const Titre = styled.h1`
+  font-size: 36px;
+  color: #ff6060;
+  margin: 0;
+  padding: 0;
+`
+
+const Locality = styled.h2`
+  font-size: 18px;
+  color: #ff6060;
+  margin: 0;
+  padding: 10px 0 0 0;
 `
 
 const BlocHost = styled.div`
   box-sizing: border-box;
-  width: fit-content;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: right;
+  align-items: flex-end;
 `
 
 const Host = styled.div`
@@ -44,6 +59,7 @@ const Host = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center;
 `
 
 const SelfieContainer = styled.div`
@@ -53,6 +69,8 @@ const SelfieContainer = styled.div`
   border-radius: 50%;
   overflow: hidden;
   background: #d4d4d4;
+  margin: 0;
+  padding: 0;
 `
 
 const Selfie = styled.img`
@@ -69,13 +87,29 @@ const Name = styled.h3`
   font-size: 18px;
   font-weight: 500;
   color: #ff6060;
+  margin: 0;
+  padding-right: 10px;
 `
 
-const BlocDrop = styled.div``
+const BlocDrop = styled.div`
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+`
 
-const DropLeft = styled.div``
+const DropLeft = styled.div`
+  box-sizing: border-box;
+  width: 47.5%;
+`
 
-const DropRight = styled.div``
+const DropRight = styled.div`
+  box-sizing: border-box;
+  width: 47.5%;
+`
 
 function Location() {
   const [error, setError] = useState(false)
@@ -90,7 +124,6 @@ function Location() {
       try {
         const response = await fetch('./datas/logements.json')
         const locationsList = await response.json()
-        console.log(locationsList)
         const rental = locationsList.find((loc) => loc.id === locationId)
         if (rental) {
           setOneLocation(rental)
@@ -116,9 +149,8 @@ function Location() {
           <Carousel medias={oneLocation.pictures} />
           <BlocInfos>
             <BlocTitre>
-              <h1>{oneLocation.title}</h1>
-              <h2>{oneLocation.location}</h2>
-
+              <Titre>{oneLocation.title}</Titre>
+              <Locality>{oneLocation.location}</Locality>
               <Tags tags={oneLocation.tags} />
             </BlocTitre>
             <BlocHost>
@@ -134,15 +166,21 @@ function Location() {
               <Stars rating={oneLocation.rating} />
             </BlocHost>
           </BlocInfos>
+
           <BlocDrop>
             <DropLeft>
               <Dropdown
+                rental
                 title="Description"
                 description={oneLocation.description}
               />
             </DropLeft>
             <DropRight>
-              <Dropdown title="Equipements" items={oneLocation.equipments} />
+              <Dropdown
+                rental
+                title="Equipements"
+                items={oneLocation.equipments}
+              />
             </DropRight>
           </BlocDrop>
         </Container>

@@ -5,7 +5,7 @@ const TagDesign = styled.ul`
   display: flex;
   flex-direction: row;
   margin: 0;
-  padding: 0;
+  padding: 20px 0 0 0;
   list-style: none;
 `
 

@@ -6,8 +6,6 @@ import ArrowDown from '../assets/VectorDown.svg'
 const DropdownContainer = styled.div`
   margin-top: 31px;
   width: 100%;
-  font-size: 24px;
-  font-weight: 400;
 `
 
 const DropdownCase = styled.div`
@@ -18,21 +16,25 @@ const DropdownCase = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 5px;
-  color: white;
   align-items: center;
 `
 
-const DropdownTitle = styled.h4`
+const DropdownTitleA = styled.h4`
   text-align: left;
+  color: #ffffff;
   font-size: 24px;
   font-weight: 500;
 `
 
+const DropdownTitleR = styled.h4`
+  text-align: left;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+`
+
 const DropdownItems = styled.div`
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  padding: 25px 20px 20px 20px;
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   color: #ff6060;
@@ -41,51 +43,108 @@ const DropdownItems = styled.div`
 const DropdownText = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  padding: 25px 20px 20px 20px;
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   color: #ff6060;
 `
 
-function Dropdown({ title, description, items }) {
+const TextA = styled.p`
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+`
+const TextB = styled.p`
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+`
+
+const Liste = styled.ul`
+  font-size: 18px;
+  font-weight: 400;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+`
+
+const Puce = styled.li``
+
+function Dropdown({ about, rental, title, description, items }) {
   const [isOpen, setIsOpen] = useState(false)
 
   return !isOpen ? (
-    <DropdownContainer>
-      <DropdownCase>
-        <DropdownTitle>{title}</DropdownTitle>
-        <img src={ArrowDown} alt="flèche" onClick={() => setIsOpen(true)} />
-      </DropdownCase>
-    </DropdownContainer>
-  ) : (
-    <DropdownContainer>
-      <DropdownCase>
-        <DropdownTitle>{title}</DropdownTitle>
-        <img src={ArrowUp} alt="flèche" onClick={() => setIsOpen(false)} />
-      </DropdownCase>
+    <div>
       {(() => {
-        if (description) {
+        if (about) {
           return (
-            <DropdownText>
-              <p>{description}</p>
-            </DropdownText>
+            <DropdownContainer>
+              <DropdownCase onClick={() => setIsOpen(true)}>
+                <DropdownTitleA>{title}</DropdownTitleA>
+                <img src={ArrowDown} alt="flèche" />
+              </DropdownCase>
+            </DropdownContainer>
           )
-        } else if (items) {
+        } else if (rental) {
           return (
-            <DropdownItems>
-              <ul>
-                {items.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </DropdownItems>
+            <DropdownContainer>
+              <DropdownCase onClick={() => setIsOpen(true)}>
+                <DropdownTitleR>{title}</DropdownTitleR>
+                <img src={ArrowDown} alt="flèche" />
+              </DropdownCase>
+            </DropdownContainer>
           )
         }
       })()}
-    </DropdownContainer>
+    </div>
+  ) : (
+    <div>
+      {(() => {
+        if (about) {
+          return (
+            <DropdownContainer>
+              <DropdownCase onClick={() => setIsOpen(false)}>
+                <DropdownTitleA>{title}</DropdownTitleA>
+                <img src={ArrowUp} alt="flèche" />
+              </DropdownCase>
+              <DropdownText>
+                <TextA>{description}</TextA>
+              </DropdownText>
+            </DropdownContainer>
+          )
+        } else if (rental) {
+          if (description) {
+            return (
+              <DropdownContainer>
+                <DropdownCase onClick={() => setIsOpen(false)}>
+                  <DropdownTitleR>{title}</DropdownTitleR>
+                  <img src={ArrowUp} alt="flèche" />
+                </DropdownCase>
+                <DropdownText>
+                  <TextB>{description}</TextB>
+                </DropdownText>
+              </DropdownContainer>
+            )
+          } else if (items) {
+            return (
+              <DropdownContainer>
+                <DropdownCase onClick={() => setIsOpen(false)}>
+                  <DropdownTitleR>{title}</DropdownTitleR>
+                  <img src={ArrowUp} alt="flèche" />
+                </DropdownCase>
+                <DropdownItems>
+                  <Liste>
+                    {items.map((item) => (
+                      <Puce key={item}>{item}</Puce>
+                    ))}
+                  </Liste>
+                </DropdownItems>
+              </DropdownContainer>
+            )
+          }
+        }
+      })()}
+    </div>
   )
 }
 

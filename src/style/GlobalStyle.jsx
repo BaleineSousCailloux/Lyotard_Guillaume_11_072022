@@ -9,9 +9,7 @@ const StyledGlobalStyle = createGlobalStyle`
         margin: 0;
         background: #e5e5e5    }
 `
-
 function GlobalStyle() {
   return <StyledGlobalStyle />
 }
-
 export default GlobalStyle

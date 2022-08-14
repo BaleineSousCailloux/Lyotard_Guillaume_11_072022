@@ -34,7 +34,7 @@ const Navigation = styled.div`
 `
 
 const Arrows = styled.img`
-  margin-top: 134px;
+  margin-top: 144px;
   height: 79px;
   width: 47px;
 `
@@ -44,23 +44,6 @@ const Counter = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
-`
-
-const PageTitle = styled.div`
-  width: 100%;
-  height: 415px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 25px;
-  overflow: hidden;
-`
-
-const ContainerDrops = styled.div`
-  width: 85%;
-  margin-bottom: 100px;
 `
 
 function Carousel({ medias }) {
@@ -89,13 +72,20 @@ function Carousel({ medias }) {
 
   return (
     <Container>
-      <Navigation>
-        <Arrows src={ArrowLeft} alt="flèche" onClick={prev} />
-        <Counter>
-          {currentIndex + 1}/{medias.length}
-        </Counter>
-        <Arrows src={ArrowRight} alt="flèche" onClick={next} />
-      </Navigation>
+      {(() => {
+        if (medias.length > 1) {
+          return (
+            <Navigation>
+              <Arrows src={ArrowLeft} alt="flèche" onClick={prev} />
+              <Counter>
+                {currentIndex + 1}/{medias.length}
+              </Counter>
+              <Arrows src={ArrowRight} alt="flèche" onClick={next} />
+            </Navigation>
+          )
+        }
+      })()}
+
       <Medias src={medias[currentIndex]} alt="vue du logement" />
     </Container>
   )

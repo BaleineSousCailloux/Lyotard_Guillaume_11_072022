@@ -5,13 +5,13 @@ import FullStar from '../assets/StarFull.svg'
 const Empty = styled.img`
   width: 30px;
   height: 30px;
-  margin: 10px 0 10px 10px;
+  margin: 20px 0 0 10px;
 `
 
 const Full = styled.img`
   width: 30px;
   height: 30px;
-  margin: 10px 0 10px 10px;
+  margin: 20px 0 0 10px;
 `
 
 function Stars({ rating }) {

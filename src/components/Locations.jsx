@@ -36,6 +36,9 @@ const PageTitle = styled.div`
   justify-content: center;
   border-radius: 25px;
   overflow: hidden;
+  @media only screen and (max-width: 795px) {
+    height: 500px;
+  }
 `
 
 const Title = styled.h1`
@@ -43,6 +46,8 @@ const Title = styled.h1`
   font-size: 48px;
   font-weight: 500;
   color: #ffffff;
+  margin: 0;
+  padding: 25px;
 `
 
 const BlackFilter = styled.div`
