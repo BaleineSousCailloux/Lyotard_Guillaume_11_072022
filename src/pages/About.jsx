@@ -1,6 +1,6 @@
 import Dropdown from '../components/Dropdown'
 import styled from 'styled-components'
-import couverture from '../assets/about-couverture-desktop.jpg'
+import couverture from '../assets/about-couverture.jpg'
 
 const Container = styled.div`
   box-sizing: border-box;
@@ -9,6 +9,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 25px 100px 0 100px;
+  @media all and (max-width: 795px) {
+    padding: 20px 20px 0 20px;
+  }
 `
 
 const PageTitle = styled.div`
@@ -21,25 +24,39 @@ const PageTitle = styled.div`
   justify-content: center;
   border-radius: 25px;
   overflow: hidden;
+  @media all and (max-width: 795px) {
+    border-radius: 10px;
+  }
 `
 
 const BlackFilter = styled.div`
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  background: #00000050;
+  background: #00000030;
   position: absolute;
+  z-index: 1;
 `
 
 const Couverture = styled.img`
+  position: absolute;
   width: 100%;
-  height: 100%;
+  height: none;
   object-fit: cover;
+  transform: translate(0, 60px);
+  @media all and (max-width: 795px) {
+    transform: translate(-15px, -10px) scale(1.3);
+    height: 100%;
+    width: none;
+  }
 `
 
 const ContainerDrops = styled.div`
   width: 85%;
   margin-bottom: 100px;
+  @media all and (max-width: 795px) {
+    width: 100%;
+  }
 `
 
 function About() {

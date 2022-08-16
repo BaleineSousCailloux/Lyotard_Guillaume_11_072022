@@ -4,9 +4,13 @@ const TagDesign = styled.ul`
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   padding: 20px 0 0 0;
   list-style: none;
+  @media all and (max-width: 795px) {
+    padding: 2.5px 0 0 0;
+  }
 `
 
 const Name = styled.li`
@@ -23,6 +27,13 @@ const Name = styled.li`
   text-align: center;
   color: #ffffff;
   background-color: #ff6060;
+  @media all and (max-width: 795px) {
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 5px;
+    min-width: 84px;
+  }
 `
 
 function Tags({ tags }) {

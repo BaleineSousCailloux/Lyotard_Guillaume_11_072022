@@ -6,12 +6,22 @@ const Empty = styled.img`
   width: 30px;
   height: 30px;
   margin: 20px 0 0 10px;
+  @media all and (max-width: 795px) {
+    width: 15px;
+    height: 15px;
+    margin: 5px 5px 5px 0;
+  }
 `
 
 const Full = styled.img`
   width: 30px;
   height: 30px;
   margin: 20px 0 0 10px;
+  @media all and (max-width: 795px) {
+    width: 15px;
+    height: 15px;
+    margin: 5px 5px 5px 0;
+  }
 `
 
 function Stars({ rating }) {

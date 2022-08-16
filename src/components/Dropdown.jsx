@@ -6,6 +6,9 @@ import ArrowDown from '../assets/VectorDown.svg'
 const DropdownContainer = styled.div`
   margin-top: 31px;
   width: 100%;
+  @media all and (max-width: 795px) {
+    margin-top: 20px;
+  }
 `
 
 const DropdownCase = styled.div`
@@ -13,10 +16,13 @@ const DropdownCase = styled.div`
   justify-content: space-between;
   background-color: #ff6060;
   height: 47px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 20px;
   border-radius: 5px;
   align-items: center;
+  @media all and (max-width: 795px) {
+    height: 30px;
+    padding: 0 12px;
+  }
 `
 
 const DropdownTitleA = styled.h4`
@@ -24,6 +30,9 @@ const DropdownTitleA = styled.h4`
   color: #ffffff;
   font-size: 24px;
   font-weight: 500;
+  @media all and (max-width: 795px) {
+    font-size: 13px;
+  }
 `
 
 const DropdownTitleR = styled.h4`
@@ -31,6 +40,9 @@ const DropdownTitleR = styled.h4`
   color: #ffffff;
   font-size: 18px;
   font-weight: 500;
+  @media all and (max-width: 795px) {
+    font-size: 13px;
+  }
 `
 
 const DropdownItems = styled.div`
@@ -38,6 +50,9 @@ const DropdownItems = styled.div`
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   color: #ff6060;
+  @media all and (max-width: 795px) {
+    padding: 20px 12px 25px 12px;
+  }
 `
 
 const DropdownText = styled.div`
@@ -47,17 +62,26 @@ const DropdownText = styled.div`
   background-color: #f6f6f6;
   border-radius: 0 0 5px 5px;
   color: #ff6060;
+  @media all and (max-width: 795px) {
+    padding: 20px 12px 25px 12px;
+  }
 `
 
 const TextA = styled.p`
   font-size: 24px;
   font-weight: 400;
   margin: 0;
+  @media all and (max-width: 795px) {
+    font-size: 12px;
+  }
 `
 const TextB = styled.p`
   font-size: 18px;
   font-weight: 400;
   margin: 0;
+  @media all and (max-width: 795px) {
+    font-size: 12px;
+  }
 `
 
 const Liste = styled.ul`
@@ -66,9 +90,22 @@ const Liste = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  @media all and (max-width: 795px) {
+    font-size: 12px;
+  }
 `
 
-const Puce = styled.li``
+const Puce = styled.li`
+  margin: 0;
+  padding: 0;
+`
+
+const Arrow = styled.img`
+  width: 24px;
+  @media all and (max-width: 795px) {
+    width: 15px;
+  }
+`
 
 function Dropdown({ about, rental, title, description, items }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -81,7 +118,7 @@ function Dropdown({ about, rental, title, description, items }) {
             <DropdownContainer>
               <DropdownCase onClick={() => setIsOpen(true)}>
                 <DropdownTitleA>{title}</DropdownTitleA>
-                <img src={ArrowDown} alt="flèche" />
+                <Arrow src={ArrowDown} alt="flèche" />
               </DropdownCase>
             </DropdownContainer>
           )
@@ -90,7 +127,7 @@ function Dropdown({ about, rental, title, description, items }) {
             <DropdownContainer>
               <DropdownCase onClick={() => setIsOpen(true)}>
                 <DropdownTitleR>{title}</DropdownTitleR>
-                <img src={ArrowDown} alt="flèche" />
+                <Arrow src={ArrowDown} alt="flèche" />
               </DropdownCase>
             </DropdownContainer>
           )
@@ -105,7 +142,7 @@ function Dropdown({ about, rental, title, description, items }) {
             <DropdownContainer>
               <DropdownCase onClick={() => setIsOpen(false)}>
                 <DropdownTitleA>{title}</DropdownTitleA>
-                <img src={ArrowUp} alt="flèche" />
+                <Arrow src={ArrowUp} alt="flèche" />
               </DropdownCase>
               <DropdownText>
                 <TextA>{description}</TextA>
@@ -118,7 +155,7 @@ function Dropdown({ about, rental, title, description, items }) {
               <DropdownContainer>
                 <DropdownCase onClick={() => setIsOpen(false)}>
                   <DropdownTitleR>{title}</DropdownTitleR>
-                  <img src={ArrowUp} alt="flèche" />
+                  <Arrow src={ArrowUp} alt="flèche" />
                 </DropdownCase>
                 <DropdownText>
                   <TextB>{description}</TextB>
@@ -130,7 +167,7 @@ function Dropdown({ about, rental, title, description, items }) {
               <DropdownContainer>
                 <DropdownCase onClick={() => setIsOpen(false)}>
                   <DropdownTitleR>{title}</DropdownTitleR>
-                  <img src={ArrowUp} alt="flèche" />
+                  <Arrow src={ArrowUp} alt="flèche" />
                 </DropdownCase>
                 <DropdownItems>
                   <Liste>

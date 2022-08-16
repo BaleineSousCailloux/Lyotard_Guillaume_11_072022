@@ -13,6 +13,10 @@ const Container = styled.div`
   display: flex;
   border-radius: 25px;
   position: relative;
+  @media all and (max-width: 795px) {
+    height: 255px;
+    border-radius: 10px;
+  }
 `
 
 const Medias = styled.img`
@@ -31,12 +35,18 @@ const Navigation = styled.div`
   width: 100%;
   height: 100%;
   padding: 23px;
+  @media all and (max-width: 795px) {
+    padding: 23px 6px;
+  }
 `
 
 const Arrows = styled.img`
   margin-top: 144px;
   height: 79px;
-  width: 47px;
+  @media all and (max-width: 795px) {
+    height: 20px;
+    margin-top: 95px;
+  }
 `
 
 const Counter = styled.p`
@@ -44,6 +54,11 @@ const Counter = styled.p`
   font-size: 18px;
   font-weight: 500;
   color: #ffffff;
+  @media all and (max-width: 795px) {
+    display: none;
+    margin-top: 210px;
+    font-size: 12px;
+  }
 `
 
 function Carousel({ medias }) {

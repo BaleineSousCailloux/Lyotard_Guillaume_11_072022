@@ -8,6 +8,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin: 100px 100px 150px 100px;
+  @media all and (max-width: 795px) {
+    margin: 150px 0;
+  }
 `
 
 const ErrorNumber = styled.h1`
@@ -16,6 +19,9 @@ const ErrorNumber = styled.h1`
   font-weight: 700;
   text-align: center;
   margin: 0;
+  @media all and (max-width: 795px) {
+    font-size: 96px;
+  }
 `
 
 const Oups = styled.h2`
@@ -24,6 +30,10 @@ const Oups = styled.h2`
   font-weight: 500;
   text-align: center;
   margin: 0;
+  @media all and (max-width: 795px) {
+    font-size: 18px;
+    padding: 0 57px;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -32,6 +42,10 @@ const StyledLink = styled(Link)`
   font-weight: 500;
   text-align: center;
   margin: 150px 0 0 0;
+  @media all and (max-width: 795px) {
+    font-size: 14px;
+    margin: 133px 0 0 0;
+  }
 `
 
 function Error404() {

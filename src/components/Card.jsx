@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import colors from '../../utils/style/colors'
 
 const CardWrapper = styled.div`
   box-sizing: border-box;
@@ -13,14 +12,24 @@ const CardWrapper = styled.div`
   border-radius: 10px;
   background: #ff6060;
   margin: 25px 30px;
+  @media all and (max-width: 795px) {
+    height: 255px;
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
 `
 
-const CardTitle = styled.h2`
-  color: #ffffff;
+const CardTitleContainer = styled.div`
   position: absolute;
   bottom: 0px;
   padding: 20px;
+  margin: 0;
+  line-height: 26px;
+`
+const CardTitle = styled.h2`
+  color: #ffffff;
   font-size: 18px;
+  font-weight: 500;
   margin: 0;
 `
 
@@ -43,7 +52,9 @@ function Card({ cover, title }) {
     <CardWrapper>
       <Gradient />
       <CardImage src={cover} alt="couverture de la location" />
-      <CardTitle>{title}</CardTitle>
+      <CardTitleContainer>
+        <CardTitle>{title}</CardTitle>
+      </CardTitleContainer>
     </CardWrapper>
   )
 }

@@ -12,6 +12,9 @@ const CopyRight = styled.p`
   font-weight: 500;
   color: #ffffff;
   margin: 0;
+  @media all and (max-width: 795px) {
+    font-size: 12px;
+  }
 `
 
 const FooterContainer = styled.div`
@@ -28,6 +31,10 @@ const FooterContainer = styled.div`
   width: 100%;
   padding-top: 66px;
   padding-bottom: 29px;
+  @media all and (max-width: 795px) {
+    padding: 62px 20px 62px 20px;
+    margin-top: 20px;
+  }
 `
 
 function Footer() {
