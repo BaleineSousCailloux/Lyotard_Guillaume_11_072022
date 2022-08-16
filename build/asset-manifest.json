@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.c5c51625.js",
-    "static/media/about-couverture.jpg": "/static/media/about-couverture.796d007cebdd47cc489b.jpg",
-    "static/media/home-couverture.jpg": "/static/media/home-couverture.0f820b85d9a6a7e177b3.jpg",
-    "static/media/logo-red.svg": "/static/media/logo-red.a6101328193bb3191cbcb50c120ec0d1.svg",
-    "static/media/logo-white.svg": "/static/media/logo-white.ee689fd9409d1b5a898b4247819d8a00.svg",
-    "index.html": "/index.html",
-    "static/media/VectorR.svg": "/static/media/VectorR.fcd8131c4741f9116bc0ec56cc449b13.svg",
-    "static/media/VectorUp.svg": "/static/media/VectorUp.ecf1488896136f153bb1ae871e39b72d.svg",
-    "static/media/VectorDown.svg": "/static/media/VectorDown.b052dd29e3a2bab76700eee79e133c37.svg",
-    "static/media/VectorL.svg": "/static/media/VectorL.10a56405f7ff25b1792c6025af90ecbd.svg",
-    "static/media/StarEmpty.svg": "/static/media/StarEmpty.a339989044fce23864b5210dc5999c26.svg",
-    "static/media/StarFull.svg": "/static/media/StarFull.92f7a221dcf5544969d3314664615039.svg",
-    "main.c5c51625.js.map": "/static/js/main.c5c51625.js.map"
+    "main.js": "/Lyotard_Guillaume_11_072022-/static/js/main.bba2b8bf.js",
+    "static/media/about-couverture.jpg": "/Lyotard_Guillaume_11_072022-/static/media/about-couverture.796d007cebdd47cc489b.jpg",
+    "static/media/home-couverture.jpg": "/Lyotard_Guillaume_11_072022-/static/media/home-couverture.0f820b85d9a6a7e177b3.jpg",
+    "static/media/logo-red.svg": "/Lyotard_Guillaume_11_072022-/static/media/logo-red.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "static/media/logo-white.svg": "/Lyotard_Guillaume_11_072022-/static/media/logo-white.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/Lyotard_Guillaume_11_072022-/index.html",
+    "static/media/VectorR.svg": "/Lyotard_Guillaume_11_072022-/static/media/VectorR.fcd8131c4741f9116bc0ec56cc449b13.svg",
+    "static/media/VectorUp.svg": "/Lyotard_Guillaume_11_072022-/static/media/VectorUp.ecf1488896136f153bb1ae871e39b72d.svg",
+    "static/media/VectorDown.svg": "/Lyotard_Guillaume_11_072022-/static/media/VectorDown.b052dd29e3a2bab76700eee79e133c37.svg",
+    "static/media/VectorL.svg": "/Lyotard_Guillaume_11_072022-/static/media/VectorL.10a56405f7ff25b1792c6025af90ecbd.svg",
+    "static/media/StarEmpty.svg": "/Lyotard_Guillaume_11_072022-/static/media/StarEmpty.a339989044fce23864b5210dc5999c26.svg",
+    "static/media/StarFull.svg": "/Lyotard_Guillaume_11_072022-/static/media/StarFull.92f7a221dcf5544969d3314664615039.svg",
+    "main.bba2b8bf.js.map": "/Lyotard_Guillaume_11_072022-/static/js/main.bba2b8bf.js.map"
   },
   "entrypoints": [
-    "static/js/main.c5c51625.js"
+    "static/js/main.bba2b8bf.js"
   ]
 }
