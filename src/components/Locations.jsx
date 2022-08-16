@@ -19,7 +19,7 @@ const CardsContainer = styled.div`
     border-radius: none;
     width: 100%;
     margin: 0;
-    background: #e5e5e5;
+    background: #ffffff;
     padding: 0 0 25px 0;
     flex-direction: column;
     flex-wrap: nowrap;

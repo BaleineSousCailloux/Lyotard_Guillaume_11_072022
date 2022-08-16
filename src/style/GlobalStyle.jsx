@@ -8,7 +8,7 @@ const StyledGlobalStyle = createGlobalStyle`
   body {
     width: 100%;
     margin: 0;
-    background: #e5e5e5    }
+    background: #ffffff    }
 `
 function GlobalStyle() {
   return <StyledGlobalStyle />

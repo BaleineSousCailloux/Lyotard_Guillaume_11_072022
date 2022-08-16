@@ -31,7 +31,7 @@ const PageTitle = styled.div`
   }
 `
 
-const TitleContainer = styled.div`
+const TitleContainer = styled.h1`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -45,7 +45,7 @@ const TitleContainer = styled.div`
     line-height: 24px;
   }
 `
-const Title = styled.h1`
+const Title = styled.span`
   font-size: 48px;
   font-weight: 500;
   color: #ffffff;

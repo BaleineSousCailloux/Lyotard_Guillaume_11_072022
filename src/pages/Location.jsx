@@ -111,8 +111,12 @@ const Selfie = styled.img`
   object-fit: cover;
 `
 
-const NameContainer = styled.div`
+const NameContainer = styled.h3`
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
   width: fit-content;
   height: 52px;
   line-height: 26px;
@@ -123,7 +127,7 @@ const NameContainer = styled.div`
   }
 `
 
-const FirstName = styled.h3`
+const FirstName = styled.span`
   text-align: right;
   font-size: 18px;
   font-weight: 500;
@@ -134,7 +138,7 @@ const FirstName = styled.h3`
     font-size: 12px;
   }
 `
-const LastName = styled.h3`
+const LastName = styled.span`
   text-align: right;
   font-size: 18px;
   font-weight: 500;

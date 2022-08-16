@@ -12,18 +12,7 @@ import About from './pages/About'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Error404 from './components/Error404'
-// import { createGlobalStyle } from 'styled-components'
-// import { ThemeProvider, SurveyProvider } from './utils/context'
 import GlobalStyle from './style/GlobalStyle'
-
-// const GlobalStyle = createGlobalStyle`
-//   * {
-//     font-family: 'Trebuchet MS', Helvetica, sans-serif;
-//   }
-//   body {
-//     maegin: 0;
-//   }
-// `
 
 const root = createRoot(document.getElementById('root'))
 root.render(
