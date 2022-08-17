@@ -1,10 +1,8 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://baleinesouscailloux.github.io/Lyotard_Guillaume_11_072022-",
   "private": true,
   "dependencies": {
-    "gh-pages": "^4.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -16,10 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
-
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
