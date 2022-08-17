@@ -16,7 +16,7 @@ const CardsContainer = styled.div`
   flex-wrap: wrap;
   align-content: center;
   @media all and (max-width: 795px) {
-    border-radius: none;
+    border-radius: 0;
     width: 100%;
     margin: 0;
     background: #ffffff;
